@@ -231,13 +231,13 @@ function realizaOperacion() {
 function realizarOperacionDeFondo() {
   switch(ultimoOperador) {
     case 'adicion':
-      return parseFloat(valorAnterior) + parseFloat(valorActual);
+      return toString(valorAnterior) " + " toString(valorActual) " = " (parseFloat(valorAnterior) + parseFloat(valorActual));
       break;
     case 'sustraccion':
-      return parseFloat(valorAnterior) - parseFloat(valorActual);
+      return toString(valorAnterior) " - " toString(valorActual) " = " (parseFloat(valorAnterior) - parseFloat(valorActual));
       break;
     case 'multiplicacion':
-      return parseFloat(valorAnterior) * parseFloat(valorActual);
+      return toString(valorAnterior) " * " toString(valorActual) " = " (parseFloat(valorAnterior) * parseFloat(valorActual));
       break;
     case 'division':
       var valor = parseFloat(valorAnterior) / parseFloat(valorActual);
@@ -246,7 +246,7 @@ function realizarOperacionDeFondo() {
         return 0;
       }
       else {
-        return valor; 
+        return toString(valorAnterior) + " / " + toString(valorActual) + " = " (parseFloat(valorAnterior) / parseFloat(valorActual)); 
       }
       break;
     case 'igual':
